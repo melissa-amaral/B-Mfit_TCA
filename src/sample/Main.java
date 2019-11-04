@@ -17,22 +17,22 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = loadMainPane();
 
-        primaryStage.setTitle("Pizzaria...");
+        primaryStage.setTitle("B&M FIT");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
     }
 
 
     private Pane loadMainPane() throws IOException {
+
         FXMLLoader loader = new FXMLLoader();
 
-        Pane mainPane = (Pane) loader.load(getClass().getResourceAsStream(NavegadorCenas.BASE)
-        );
+        Pane mainPane = (Pane) loader.load(getClass().getResourceAsStream(NavegadorCenas.BASE));
 
         JanelaBase controller = loader.getController();
 
         NavegadorCenas.setControlador(controller);
-        //NavegadorCenas.loadJanela(NavegadorCenas.PRINCIPAL);
+        NavegadorCenas.loadJanela(NavegadorCenas.PRINCIPAL);
 
         return mainPane;
     }

@@ -21,7 +21,16 @@ public class Usuario{
         this.email = email;
     }
 
-    //falta construtor
+    public Usuario(int id, String nome, Nivel id_nivel, String rg, String cpf, String login, String senha, String email) {
+        this.id = id;
+        this.nome = nome;
+        this.id_nivel = id_nivel;
+        this.rg = rg;
+        this.cpf = cpf;
+        this.login = login;
+        this.senha = senha;
+        this.email = email;
+    }
 
     public int getId() {
         return id;
