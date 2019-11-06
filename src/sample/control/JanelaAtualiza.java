@@ -11,7 +11,7 @@ import sample.model.Usuario;
 
 import java.sql.SQLException;
 
-public class JanelaCadastroUsuario {
+public class JanelaAtualiza {
 
     @FXML
     private TextField tfNome;
@@ -43,7 +43,7 @@ public class JanelaCadastroUsuario {
         }
     }
 
-    public void cadastrar() throws SQLException {
+    public void atualizar() throws SQLException {
 
         String nome = tfNome.getText();
         String rg = tfRg.getText();
@@ -53,24 +53,9 @@ public class JanelaCadastroUsuario {
         String email = tfEmail.getText();
         Nivel nivelop = nivel.getValue();
 
+        Usuario u = new Usuario(nome, nivelop, rg, CPF, login, senha, email);
+        Controle.getInstance().atualizar(u);
 
-        if(nivelop != null){
-
-            if(Controle.getInstance().verificar(login, senha) == null ){
-
-                Usuario u = new Usuario(nome, nivelop, rg, CPF, login, senha, email);
-                Controle.getInstance().cadastraUsuario(u);
-                voltar();
-            }
-            else{
-                Alert alert = new Alert(Alert.AlertType.ERROR,"Login indisponivel!");
-                alert.showAndWait();
-            }
-
-        }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR,"Nenhum nivel selecionado!");
-            alert.showAndWait();
-        }
     }
 
 

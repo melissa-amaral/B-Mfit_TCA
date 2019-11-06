@@ -30,18 +30,20 @@ public class UsuarioDAOImpl implements UsuarioDAO {
     }
 
     @Override
-    public Usuario atualiza(Usuario u) throws SQLException {
+    public Usuario atualiza(Usuario u, Usuario logado) throws SQLException {
         Connection con = FabricaConexao.getConnection();
 
-        PreparedStatement stm = con.prepareStatement("UPDATE tca_usuario SET nome=?, id_nivel=?, rg=?, cpf=?, login=?, senha=?, email=?");
+        PreparedStatement stm = con.prepareStatement("UPDATE tca_usuario WHERE id = ?  SET nome=?, id_nivel=?, rg=?, cpf=?, login=?, senha=?, email=? ");
 
-        stm.setString(1,u.getNome());
-        stm.setInt(2,u.getId_nivel().getId());
-        stm.setString(3,u.getRg());
-        stm.setString(4,u.getCpf());
-        stm.setString(5,u.getLogin());
-        stm.setString(6,u.getSenha());
-        stm.setString(7,u.getEmail());
+        stm.setInt(1,logado.getId());
+        stm.setString(2,u.getNome());
+        stm.setInt(3,u.getId_nivel().getId());
+        stm.setString(4,u.getRg());
+        stm.setString(5,u.getCpf());
+        stm.setString(6,u.getLogin());
+        stm.setString(7,u.getSenha());
+        stm.setString(8,u.getEmail());
+
 
         stm.executeUpdate();
 
@@ -68,14 +70,15 @@ public class UsuarioDAOImpl implements UsuarioDAO {
     }
 
     @Override
-    public Usuario buscaNome(String login_busca) throws SQLException {
+    public Usuario verificaUser(String login_busca, String senha_busca) throws SQLException {
         Usuario usuario = null;
 
         Connection con = FabricaConexao.getConnection();
 
-        PreparedStatement stm = con.prepareStatement("SELECT * FROM tca_usuario where login like ?");
+        PreparedStatement stm = con.prepareStatement("SELECT * FROM tca_usuario where login like ? and senha like ?");
 
         stm.setString(1,login_busca);
+        stm.setString(2,senha_busca);
 
         NivelDAO nivelDAO = new NivelDAOImpl();
 

@@ -12,6 +12,7 @@ public class Controle {
 
     private ObservableList<Usuario> usuarios;
     private ObservableList<Nivel> niveis;
+    private Usuario logado;
 
     private static Controle instance=new Controle();
 
@@ -28,12 +29,15 @@ public class Controle {
         usuarioDAO.insere(u);
     }
 
-    public Usuario Verificar(String login) throws SQLException {
-        Usuario u = usuarioDAO.buscaNome(login);
-
-
+    public Usuario verificar(String login, String senha) throws SQLException {
+        logado = null;
+        Usuario u = usuarioDAO.verificaUser(login, senha);
+        if(u != null){
+            logado = u;
+        }
         return u;
     }
+
 
     public ObservableList<Usuario> listaUsuario() throws SQLException{
         usuarios.clear();
@@ -53,6 +57,10 @@ public class Controle {
         System.out.println(niveis);
 
         return niveis;
+    }
+
+    public void atualizar(Usuario u) throws SQLException{
+        usuarioDAO.atualiza(u, logado);
     }
 
 
