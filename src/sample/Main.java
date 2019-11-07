@@ -18,7 +18,7 @@ public class Main extends Application {
         Parent root = loadMainPane();
 
         primaryStage.setTitle("B&M FIT");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, Pane.USE_PREF_SIZE,Pane.USE_PREF_SIZE));
         primaryStage.show();
     }
 
@@ -32,7 +32,7 @@ public class Main extends Application {
         JanelaBase controller = loader.getController();
 
         NavegadorCenas.setControlador(controller);
-        NavegadorCenas.loadJanela(NavegadorCenas.PRINCIPAL);
+        NavegadorCenas.loadJanela(NavegadorCenas.LOGIN);
 
         return mainPane;
     }

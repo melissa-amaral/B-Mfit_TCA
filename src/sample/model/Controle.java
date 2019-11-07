@@ -60,7 +60,8 @@ public class Controle {
     }
 
     public void atualizar(Usuario u) throws SQLException{
-        usuarioDAO.atualiza(u, logado);
+        u.setId(logado.getId());
+        usuarioDAO.atualiza(u);
     }
 
 

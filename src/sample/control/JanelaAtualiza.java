@@ -55,6 +55,7 @@ public class JanelaAtualiza {
 
         Usuario u = new Usuario(nome, nivelop, rg, CPF, login, senha, email);
         Controle.getInstance().atualizar(u);
+        voltar();
 
     }
 

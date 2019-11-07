@@ -30,19 +30,20 @@ public class UsuarioDAOImpl implements UsuarioDAO {
     }
 
     @Override
-    public Usuario atualiza(Usuario u, Usuario logado) throws SQLException {
+    public Usuario atualiza(Usuario u) throws SQLException {
         Connection con = FabricaConexao.getConnection();
 
-        PreparedStatement stm = con.prepareStatement("UPDATE tca_usuario WHERE id = ?  SET nome=?, id_nivel=?, rg=?, cpf=?, login=?, senha=?, email=? ");
+        PreparedStatement stm = con.prepareStatement("UPDATE tca_usuario SET nome=?, id_nivel=?, rg=?, cpf=?, login=?, senha=?, email=? WHERE id_usuario = ?");
 
-        stm.setInt(1,logado.getId());
-        stm.setString(2,u.getNome());
-        stm.setInt(3,u.getId_nivel().getId());
-        stm.setString(4,u.getRg());
-        stm.setString(5,u.getCpf());
-        stm.setString(6,u.getLogin());
-        stm.setString(7,u.getSenha());
-        stm.setString(8,u.getEmail());
+        stm.setString(1,u.getNome());
+        stm.setInt(2,u.getId_nivel().getId());
+        stm.setString(3,u.getRg());
+        stm.setString(4,u.getCpf());
+        stm.setString(5,u.getLogin());
+        stm.setString(6,u.getSenha());
+        stm.setString(7,u.getEmail());
+        stm.setInt(8,u.getId());
+
 
 
         stm.executeUpdate();
@@ -85,6 +86,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
         ResultSet res = stm.executeQuery();
 
         while(res.next()){
+            int id = res.getInt("id_usuario");
             String nome = res.getString("nome");
             int id_nivel = res.getInt("id_nivel");
             String rg = res.getString("rg");
@@ -96,6 +98,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
             Nivel n =  nivelDAO.buscaId(id_nivel);
 
             usuario = new Usuario(nome, n, rg, cpf, login, senha, email);
+            usuario.setId(id);
         }
 
         res.close();

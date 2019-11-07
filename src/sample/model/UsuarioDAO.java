@@ -6,7 +6,7 @@ import java.util.List;
 public interface UsuarioDAO {
 
     Usuario insere(Usuario usuario) throws SQLException;
-    Usuario atualiza(Usuario u, Usuario logado) throws SQLException;
+    Usuario atualiza(Usuario u) throws SQLException;
     boolean remove(Usuario u) throws SQLException;
 
     Usuario verificaUser(String login_busca, String senha_busca) throws SQLException;

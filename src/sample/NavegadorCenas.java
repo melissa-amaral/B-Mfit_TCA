@@ -10,6 +10,7 @@ public class NavegadorCenas {
 
     public static final String BASE = "/view/base.fxml";
     public static final String PRINCIPAL = "/view/principal.fxml";
+    public static final String LOGIN = "/view/login.fxml";
     public static final String JANELA_USUARIO = "/view/cadastrar_usuario.fxml";
     public static final String JANELA_TELA_USUARIO = "/view/telaUsuario.fxml";
     public static final String JANELA_ATUALIZA = "/view/atualizar.fxml";

@@ -21,18 +21,7 @@ public class JanelaPrincipal {
         NavegadorCenas.loadJanela(NavegadorCenas.JANELA_USUARIO);
     }
 
-    public void entrar() throws SQLException {
-        String login = tfLogin.getText();
-        String senha = tfSenha.getText();
 
-        if(Controle.getInstance().verificar(login, senha) != null ){
-            NavegadorCenas.loadJanela(NavegadorCenas.JANELA_TELA_USUARIO);
-        }
-        else{
-            Alert alert = new Alert(Alert.AlertType.ERROR,"Usuario não Encontrado");
-            alert.showAndWait();
-        }
-    }
 
     private void mensagem(Alert.AlertType type, String msg){
         Alert alert = new Alert(type,msg);

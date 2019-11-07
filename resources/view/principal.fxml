@@ -30,44 +30,7 @@
         </MenuBar>
     </top>
 
-    <center>
-        <GridPane alignment="TOP_CENTER" styleClass="borda" hgap="5" vgap="5">
-            <Label styleClass="label-principal" GridPane.columnIndex="0"
-                   GridPane.rowIndex="0"
-                   labelFor="$tfLogin"
-                   text="Login:"
-            />
 
-            <TextField prefWidth="200" fx:id="tfLogin"
-                       GridPane.columnIndex="1"
-                       GridPane.rowIndex="0"
-                       GridPane.columnSpan="4"
-                       promptText="Login:"
-            />
-
-            <Label styleClass="label-principal" GridPane.columnIndex="0"
-                   GridPane.rowIndex="1"
-                   labelFor="$tfSenha"
-                   text="Senha:" />
-
-            <PasswordField prefWidth="200" fx:id="tfSenha"
-                           GridPane.columnIndex="1"
-                           GridPane.rowIndex="1"
-                           GridPane.columnSpan="4"
-                           promptText="Senha:"
-            />
-
-
-            <Button prefWidth="150" GridPane.columnIndex="1"
-                    GridPane.rowIndex="2"
-                    onAction="#entrar"  text="ENTRAR"/>
-
-            <Button prefWidth="150" GridPane.columnIndex="1"
-                    GridPane.rowIndex="3"
-                   text="RANKING"/>
-        </GridPane>
-
-    </center>
 
 
 </BorderPane>

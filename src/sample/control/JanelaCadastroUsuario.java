@@ -54,7 +54,7 @@ public class JanelaCadastroUsuario {
         Nivel nivelop = nivel.getValue();
 
 
-        if(nivelop != null){
+        if(nivelop != null && nome != null && rg != null && CPF != null && senha != null && email != null){
 
             if(Controle.getInstance().verificar(login, senha) == null ){
 
