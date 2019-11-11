@@ -18,6 +18,18 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="sample.control.JanelaLogin">
 
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="MENU">
+                    <items>
+                        <MenuItem onAction="#cadastrarUsuario" text="Cadastrar Usuario" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
     <center>
         <GridPane alignment="TOP_CENTER" styleClass="borda" hgap="5" vgap="5">
             <Label styleClass="label-principal" GridPane.columnIndex="0"

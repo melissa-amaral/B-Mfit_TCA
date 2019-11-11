@@ -4,11 +4,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 
 public class Controle {
 
     UsuarioDAO usuarioDAO = new UsuarioDAOImpl();
     NivelDAO nivelDAO = new NivelDAOImpl();
+    ImcDAO imcDAO = new ImcDAOImpl();
 
     private ObservableList<Usuario> usuarios;
     private ObservableList<Nivel> niveis;
@@ -64,12 +66,17 @@ public class Controle {
         usuarioDAO.atualiza(u);
     }
 
+    public void cadastrarIMC(float kg, float altura, LocalDateTime data) throws SQLException{
+        IMC i = new IMC(kg, altura, data);
+        i.setUsuario(logado);
+        imcDAO.insere(i);
+    }
 
-
-
-
-
-
+    public void atualizarIMC(float kg, float altura, LocalDateTime data) throws SQLException{
+        IMC i = new IMC(kg, altura, data);
+        i.setUsuario(logado);
+        imcDAO.atualiza(i);
+    }
 
 }
 

@@ -1,11 +1,18 @@
 package sample.control;
 
 import sample.NavegadorCenas;
-import sample.model.Controle;
 
 public class JanelaTelaUsuario {
 
     public void atualizarDados(){
         NavegadorCenas.loadJanela(NavegadorCenas.JANELA_ATUALIZA);
+    }
+
+    public void IMC(){
+        NavegadorCenas.loadJanela(NavegadorCenas.JANELA_IMC);
+    }
+
+    public void voltar(){
+        NavegadorCenas.loadJanela(NavegadorCenas.LOGIN);
     }
 }

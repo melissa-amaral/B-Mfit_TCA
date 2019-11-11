@@ -16,13 +16,16 @@ public class JanelaLogin {
     @FXML
     public TextField tfSenha;
 
+    public void cadastrarUsuario(){
+        NavegadorCenas.loadJanela(NavegadorCenas.JANELA_USUARIO);
+    }
 
     public void entrar() throws SQLException {
         String login = tfLogin.getText();
         String senha = tfSenha.getText();
 
         if(Controle.getInstance().verificar(login, senha) != null ){
-            NavegadorCenas.loadJanela(NavegadorCenas.PRINCIPAL);
+            NavegadorCenas.loadJanela(NavegadorCenas.JANELA_TELA_USUARIO);
         }
         else{
             Alert alert = new Alert(Alert.AlertType.ERROR,"Usuario não Encontrado");

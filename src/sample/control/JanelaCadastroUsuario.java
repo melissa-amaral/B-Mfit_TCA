@@ -68,13 +68,13 @@ public class JanelaCadastroUsuario {
             }
 
         }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR,"Nenhum nivel selecionado!");
+            Alert alert = new Alert(Alert.AlertType.ERROR,"PREENCHA TODOS OS ITENS!");
             alert.showAndWait();
         }
     }
 
 
     public void voltar(){
-        NavegadorCenas.loadJanela(NavegadorCenas.PRINCIPAL);
+        NavegadorCenas.loadJanela(NavegadorCenas.LOGIN);
     }
 }

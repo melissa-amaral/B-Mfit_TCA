@@ -61,6 +61,6 @@ public class JanelaAtualiza {
 
 
     public void voltar(){
-        NavegadorCenas.loadJanela(NavegadorCenas.PRINCIPAL);
+        NavegadorCenas.loadJanela(NavegadorCenas.JANELA_TELA_USUARIO);
     }
 }
