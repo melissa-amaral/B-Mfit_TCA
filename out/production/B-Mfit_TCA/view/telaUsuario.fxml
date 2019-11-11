@@ -17,7 +17,8 @@
                 <Menu text="MENU">
                     <items>
                         <MenuItem onAction="#atualizarDados" text="Atualizar Dados" />
-                        <MenuItem onAction="#IMC" text="IMC" />
+                        <MenuItem onAction="#imc" text="IMC" />
+                        <MenuItem onAction="#pdf" text="PDF" />
                         <MenuItem onAction="#sair" text="Sair" />
                     </items>
                 </Menu>

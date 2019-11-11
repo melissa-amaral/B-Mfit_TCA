@@ -9,6 +9,7 @@ import sample.model.IMC;
 
 import java.awt.*;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class JanelaIMC {
@@ -23,7 +24,7 @@ public class JanelaIMC {
     public void cadastrar() throws SQLException {
         float kg = Float.valueOf(tfKg.getText());
         float altura = Float.valueOf(tfAltura.getText());
-        LocalDateTime data = LocalDateTime.now();
+        LocalDate data = LocalDate.now();
 
         if(kg != 0 && altura != 0){
             Controle.getInstance().cadastrarIMC(kg, altura, data);
@@ -37,7 +38,7 @@ public class JanelaIMC {
     public void atualizar() throws SQLException{
         float kg_atual = Float.valueOf(tfKg.getText());
         float altura = Float.valueOf(tfAltura.getText());
-        LocalDateTime data = LocalDateTime.now();
+        LocalDate data = LocalDate.now();
 
         if(kg_atual != 0 && altura != 0){
             Controle.getInstance().atualizarIMC(kg_atual, altura, data);

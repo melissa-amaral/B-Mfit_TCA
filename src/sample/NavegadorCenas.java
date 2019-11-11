@@ -14,6 +14,7 @@ public class NavegadorCenas {
     public static final String JANELA_TELA_USUARIO = "/view/telaUsuario.fxml";
     public static final String JANELA_ATUALIZA = "/view/atualizar.fxml";
     public static final String JANELA_IMC = "/view/cadastrar_IMC.fxml";
+    public static final String JANELA_PDF = "/view/pdf.fxml";
 
 
     private static JanelaBase controlador;

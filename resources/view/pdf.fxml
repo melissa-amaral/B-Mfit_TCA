@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.JanelaPDF">
+    <top>
+        <HBox>
+            <Text text="NOME DO PDF:" />
+            <TextField fx:id="tfNome" promptText="&quot;.pdf&quot;" />
+        </HBox>
+    </top>
+
+    <center>
+        <Text text="Clique para gerar o PDF" />
+        <ListView fx:id="lista_dietas" onMouseClicked="#gerarPDF" />
+    </center>
+
+</BorderPane>

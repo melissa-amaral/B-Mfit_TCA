@@ -1,6 +1,9 @@
 package sample.control;
 
 import sample.NavegadorCenas;
+import sample.model.Controle;
+
+import java.sql.SQLException;
 
 public class JanelaTelaUsuario {
 
@@ -8,9 +11,9 @@ public class JanelaTelaUsuario {
         NavegadorCenas.loadJanela(NavegadorCenas.JANELA_ATUALIZA);
     }
 
-    public void IMC(){
-        NavegadorCenas.loadJanela(NavegadorCenas.JANELA_IMC);
-    }
+    public void imc(){ NavegadorCenas.loadJanela(NavegadorCenas.JANELA_IMC); }
+
+    public void pdf(){NavegadorCenas.loadJanela(NavegadorCenas.JANELA_PDF);}
 
     public void sair(){
         NavegadorCenas.loadJanela(NavegadorCenas.LOGIN);

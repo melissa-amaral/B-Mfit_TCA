@@ -13,10 +13,10 @@
     <center>
         <VBox>
             <Text text="NOME:" />
-            <TextField fx:id="tfNome" prefHeight="26.0" prefWidth="388.0" />
+            <TextField fx:id="tfNome" />
 
             <Text text="RG:" />
-            <TextField fx:id="tfRg" prefHeight="26.0" prefWidth="431.0" />
+            <TextField fx:id="tfRg"/>
 
             <Text text="CPF:" />
             <TextField fx:id="tfCPF" />
