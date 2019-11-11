@@ -1,5 +1,6 @@
 package sample.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class IMC {
@@ -8,22 +9,29 @@ public class IMC {
     private Usuario usuario;
     private float kg_inicial;
     private float altura;
-    private LocalDateTime data_inicial;
+    private LocalDate data_inicial;
     private float kg_atual;
-    private LocalDateTime data_atual;
+    private LocalDate data_atual;
 
 
-    public IMC(float kg_inicial, float altura, LocalDateTime data_inicial) {
+    public IMC(){
+
+    }
+
+    public IMC(float kg_inicial, float altura, LocalDate data_inicial) {
         this.kg_inicial = kg_inicial;
         this.altura = altura;
         this.data_inicial = data_inicial;
     }
 
-    
-
-
-
-
+    public IMC(Usuario usuario, float kg_inicial, float altura, LocalDate data_inicial, float kg_atual, LocalDate data_atual) {
+        this.usuario = usuario;
+        this.kg_inicial = kg_inicial;
+        this.altura = altura;
+        this.data_inicial = data_inicial;
+        this.kg_atual = kg_atual;
+        this.data_atual = data_atual;
+    }
 
     public int getId() {
         return id;
@@ -57,11 +65,11 @@ public class IMC {
         this.altura = altura;
     }
 
-    public LocalDateTime getData_inicial() {
+    public LocalDate getData_inicial() {
         return data_inicial;
     }
 
-    public void setData_inicial(LocalDateTime data_inicial) {
+    public void setData_inicial(LocalDate data_inicial) {
         this.data_inicial = data_inicial;
     }
 
@@ -73,11 +81,11 @@ public class IMC {
         this.kg_atual = kg_atual;
     }
 
-    public LocalDateTime getData_atual() {
+    public LocalDate getData_atual() {
         return data_atual;
     }
 
-    public void setData_atual(LocalDateTime data_atual) {
+    public void setData_atual(LocalDate data_atual) {
         this.data_atual = data_atual;
     }
 }

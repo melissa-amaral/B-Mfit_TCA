@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.control.JanelaAtualiza">
+    <center>
+        <VBox>
+            <Text text="NOME:" />
+            <TextField fx:id="tfNome"  />
+
+            <Text text="RG:" />
+            <TextField fx:id="tfRg"  />
+
+            <Text text="CPF:" />
+            <TextField fx:id="tfCPF" />
+
+            <Text text="LOGIN:" />
+            <TextField fx:id="tfLogin" />
+
+            <Text text="SENHA:" />
+            <TextField fx:id="tfSenha" />
+
+            <Text text="EMAIL:" />
+            <TextField fx:id="tfEmail" />
+
+            <Text text="Nivel" />
+            <ComboBox fx:id="nivel" />
+
+
+
+            <Button onAction="#atualizar" text="Atualizar" />
+            <Button onAction="#voltar" text="Voltar" />
+        </VBox>
+    </center>
+
+
+</BorderPane>

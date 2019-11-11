@@ -73,8 +73,12 @@ public class Controle {
     }
 
     public void atualizarIMC(float kg, float altura, LocalDateTime data) throws SQLException{
-        IMC i = new IMC(kg, altura, data);
+        IMC i = new IMC();
+        i.setKg_atual(kg);
+        i.setAltura(altura);
+        i.setData_atual(data);
         i.setUsuario(logado);
+
         imcDAO.atualiza(i);
     }
 

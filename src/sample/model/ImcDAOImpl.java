@@ -1,9 +1,10 @@
 package sample.model;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Timestamp;
+import java.sql.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ImcDAOImpl implements ImcDAO {
 
@@ -43,4 +44,40 @@ public class ImcDAOImpl implements ImcDAO {
 
         return i;
     }
+
+    @Override
+    public List<IMC> lista() throws SQLException {
+        ArrayList<IMC> imc = new ArrayList<>();
+
+        Connection con = FabricaConexao.getConnection();
+
+        Statement stm = con.createStatement();
+
+        UsuarioDAO usuarioDAO = new UsuarioDAOImpl();
+
+        ResultSet res = stm.executeQuery("SELECT * FROM tca_imc");
+
+        while(res.next()){
+
+            int id_usuario = res.getInt("id_usuario");
+            float kg_inicial = res.getFloat("kg_inicial");
+            float altura = res.getFloat("altura");
+            LocalDate data_inicial = res.getDate("data_inicial").toLocalDate();
+            float kg_atual = res.getFloat("kg_altura");
+            LocalDate data_atual = res.getDate("data_atual").toLocalDate();
+
+            Usuario u = usuarioDAO.buscaId(id_usuario);
+
+            IMC i = new IMC(u, kg_inicial, altura, data_inicial, kg_atual, data_atual);
+
+            imc.add(i);
+        }
+
+        res.close();
+        stm.close();
+        con.close();
+
+        return imc;
+    }
+
 }

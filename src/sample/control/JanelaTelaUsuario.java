@@ -12,7 +12,7 @@ public class JanelaTelaUsuario {
         NavegadorCenas.loadJanela(NavegadorCenas.JANELA_IMC);
     }
 
-    public void voltar(){
+    public void sair(){
         NavegadorCenas.loadJanela(NavegadorCenas.LOGIN);
     }
 }
