@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.control.JanelaTelaUsuario"
-            prefHeight="400.0" prefWidth="600.0">
-
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.JanelaTelaUsuario">
     <top>
         <MenuBar>
             <menus>
@@ -19,11 +19,27 @@
                         <MenuItem onAction="#atualizarDados" text="Atualizar Dados" />
                         <MenuItem onAction="#imc" text="IMC" />
                         <MenuItem onAction="#pdf" text="PDF" />
-                        <MenuItem onAction="#sair" text="Sair" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
     </top>
 
+
+    <center>
+        <VBox spacing="5">
+
+            <Text text="MEU TREINO" wrappingWidth="117.05615234375" />
+            <Label prefHeight="34.0" prefWidth="95.0" text="Label" />
+            <Button onAction="#cadastrarMod" prefHeight="28.0" prefWidth="66.0" text="Treinos" />
+
+            <RadioButton mnemonicParsing="false" text="Personalizado" />
+            <RadioButton mnemonicParsing="false" text="Aleatório" />
+
+        </VBox>
+    </center>
+
+    <bottom>
+        <Button layoutX="7.0" layoutY="367.0" mnemonicParsing="false" onAction="#sair" text="Sair" />
+    </bottom>
 </BorderPane>

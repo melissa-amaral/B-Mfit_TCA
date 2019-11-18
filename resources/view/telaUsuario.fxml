@@ -6,14 +6,12 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.JanelaTelaUsuario">
-
-
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.JanelaTelaUsuario">
+    <top>
         <MenuBar>
             <menus>
                 <Menu text="MENU">
@@ -25,16 +23,23 @@
                 </Menu>
             </menus>
         </MenuBar>
-
-        <VBox spacing="20" BorderPane.alignment="CENTER" />
-         <Button layoutX="8.0" layoutY="110.0" prefHeight="30.0" prefWidth="116.0" text="Outros Treinos" />
+    </top>
 
 
-     <RadioButton layoutX="8.0" layoutY="158.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="115.0" text="Personalizado" />
-         <RadioButton layoutX="8.0" layoutY="191.0" mnemonicParsing="false" text="Aleatório" />
-         <Text layoutX="8.0" layoutY="52.0" text="MEU TREINO" />
-   <Label layoutX="9.0" layoutY="55.0" prefHeight="46.0" prefWidth="164.0" text="Label" />
-   <Button layoutX="7.0" layoutY="367.0" mnemonicParsing="false" text="Sair" onAction="#sair"/>
-   
+    <center>
+        <VBox spacing="5">
 
-</AnchorPane>
+            <Text text="MEU TREINO" wrappingWidth="117.05615234375" />
+            <Label prefHeight="34.0" prefWidth="95.0" text="Label" />
+            <Button onAction="#cadastrarMod" prefHeight="28.0" prefWidth="66.0" text="Treinos" />
+
+            <RadioButton mnemonicParsing="false" text="Personalizado" />
+            <RadioButton mnemonicParsing="false" text="Aleatório" />
+
+        </VBox>
+    </center>
+
+    <bottom>
+        <Button layoutX="7.0" layoutY="367.0" mnemonicParsing="false" onAction="#sair" text="Sair" />
+    </bottom>
+</BorderPane>

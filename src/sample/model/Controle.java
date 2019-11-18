@@ -20,11 +20,15 @@ public class Controle {
     NivelDAO nivelDAO = new NivelDAOImpl();
     ImcDAO imcDAO = new ImcDAOImpl();
     DietaDAO dietaDAO = new DietaDAOImpl();
+    ModalidadeDAO modalidadeDAO = new ModalidadeDAOImpl();
+    Modalidade_UsuarioDAO modalidade_usuarioDAO = new Modalidade_UsuarioDAOImpl();
 
     private ObservableList<Usuario> usuarios;
     private ObservableList<Nivel> niveis;
     private ObservableList<IMC> imcs;
     private ObservableList<Alimentacao> alimentacaos;
+    private ObservableList<Modalidade> modalidades;
+    private ObservableList<Modalidade_Usuario> modalidade_usuarios;
     private Usuario logado;
 
     private static Controle instance=new Controle();
@@ -34,6 +38,8 @@ public class Controle {
         niveis = FXCollections.observableArrayList();
         imcs = FXCollections.observableArrayList();
         alimentacaos = FXCollections.observableArrayList();
+        modalidades = FXCollections.observableArrayList();
+        modalidade_usuarios = FXCollections.observableArrayList();
     }
 
     public static Controle getInstance(){
@@ -136,6 +142,20 @@ public class Controle {
     public IMC buscaIMC() throws SQLException{
         IMC imc = imcDAO.buscaIMC(logado);
         return imc;
+    }
+
+    public ObservableList<Modalidade> listaModalidade() throws SQLException{
+        modalidades.clear();
+        modalidades.addAll(modalidadeDAO.lista());
+
+        return modalidades;
+    }
+
+    public void cadastarModalidadeUser(Modalidade mod, LocalDate data) throws SQLException{
+      Modalidade_Usuario mu = new Modalidade_Usuario(mod, data);
+      mu.setId_usuario(logado);
+
+      modalidade_usuarioDAO.insere(mu);
     }
 
 

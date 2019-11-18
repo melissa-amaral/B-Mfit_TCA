@@ -15,6 +15,10 @@ public class JanelaTelaUsuario {
 
     public void pdf(){NavegadorCenas.loadJanela(NavegadorCenas.JANELA_PDF);}
 
+    public void cadastrarMod(){
+        NavegadorCenas.loadJanela(NavegadorCenas.JANELA_MODALIDADE);
+    }
+
     public void sair(){
         NavegadorCenas.loadJanela(NavegadorCenas.LOGIN);
     }

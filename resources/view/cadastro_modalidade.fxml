@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.JanelaModalidade">
+
+    <VBox spacing="5">
+        <Text text="Modalidades:" />
+        <ComboBox fx:id="idMod" />
+        <HBox spacing="3">
+            <Button onAction="#cadastrar" text="Cadastrar"/>
+            <Button onAction="#voltar" text="Voltar"/>
+
+        </HBox>
+    </VBox>
+
+
+</AnchorPane>

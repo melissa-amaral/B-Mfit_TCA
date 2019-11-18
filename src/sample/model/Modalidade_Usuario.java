@@ -9,11 +9,18 @@ public class Modalidade_Usuario {
     private LocalDate data_inicio;
     private LocalDate data_termino;
 
+    public Modalidade_Usuario(){}
+
     public Modalidade_Usuario(Modalidade id_modalidade, Usuario id_usuario, LocalDate data_inicio, LocalDate data_termino) {
         this.id_modalidade = id_modalidade;
         this.id_usuario = id_usuario;
         this.data_inicio = data_inicio;
         this.data_termino = data_termino;
+    }
+
+    public Modalidade_Usuario(Modalidade id_modalidade, LocalDate data_inicio) {
+        this.id_modalidade = id_modalidade;
+        this.data_inicio = data_inicio;
     }
 
     public Modalidade getId_modalidade() {
