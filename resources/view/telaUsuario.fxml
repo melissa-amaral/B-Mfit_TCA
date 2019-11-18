@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.control.JanelaTelaUsuario"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.JanelaTelaUsuario">
 
-    <top>
+
         <MenuBar>
             <menus>
                 <Menu text="MENU">
@@ -19,11 +21,20 @@
                         <MenuItem onAction="#atualizarDados" text="Atualizar Dados" />
                         <MenuItem onAction="#imc" text="IMC" />
                         <MenuItem onAction="#pdf" text="PDF" />
-                        <MenuItem onAction="#sair" text="Sair" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-    </top>
 
-</BorderPane>
+        <VBox spacing="20" BorderPane.alignment="CENTER" />
+         <Button layoutX="8.0" layoutY="110.0" prefHeight="30.0" prefWidth="116.0" text="Outros Treinos" />
+
+
+     <RadioButton layoutX="8.0" layoutY="158.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="115.0" text="Personalizado" />
+         <RadioButton layoutX="8.0" layoutY="191.0" mnemonicParsing="false" text="Aleatório" />
+         <Text layoutX="8.0" layoutY="52.0" text="MEU TREINO" />
+   <Label layoutX="9.0" layoutY="55.0" prefHeight="46.0" prefWidth="164.0" text="Label" />
+   <Button layoutX="7.0" layoutY="367.0" mnemonicParsing="false" text="Sair" onAction="#sair"/>
+   
+
+</AnchorPane>

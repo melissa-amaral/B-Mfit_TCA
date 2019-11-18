@@ -6,18 +6,13 @@ import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
-import com.itextpdf.layout.element.List;
-import com.itextpdf.layout.element.ListItem;
 import com.itextpdf.layout.element.Paragraph;
-import com.itextpdf.layout.property.ListNumberingType;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class Controle {
 
@@ -29,7 +24,7 @@ public class Controle {
     private ObservableList<Usuario> usuarios;
     private ObservableList<Nivel> niveis;
     private ObservableList<IMC> imcs;
-    private ObservableList<Dieta> dietas;
+    private ObservableList<Alimentacao> alimentacaos;
     private Usuario logado;
 
     private static Controle instance=new Controle();
@@ -38,7 +33,7 @@ public class Controle {
         usuarios = FXCollections.observableArrayList();
         niveis = FXCollections.observableArrayList();
         imcs = FXCollections.observableArrayList();
-        dietas = FXCollections.observableArrayList();
+        alimentacaos = FXCollections.observableArrayList();
     }
 
     public static Controle getInstance(){
@@ -57,7 +52,6 @@ public class Controle {
         }
         return u;
     }
-
 
     public ObservableList<Usuario> listaUsuario() throws SQLException{
         usuarios.clear();
@@ -100,10 +94,10 @@ public class Controle {
         return imcs;
     }
 
-    public ObservableList<Dieta> listaDieta() throws SQLException{
-        dietas.clear();
-        dietas.addAll(dietaDAO.lista());
-        return dietas;
+    public ObservableList<Alimentacao> listaDieta() throws SQLException{
+        alimentacaos.clear();
+        alimentacaos.addAll(dietaDAO.lista());
+        return alimentacaos;
     }
 
     //este método cria um documento para receber o conteúdo
@@ -115,15 +109,14 @@ public class Controle {
         return  document;
     }
 
-    public void criaPdf(String arq, Dieta dieta){
-
+    public void criaPdf(String arq, Alimentacao alimentacao){
         try{
             Document document = abreDocumento(arq);
 
             // Cria uma fonte
             PdfFont font = PdfFontFactory.createFont(StandardFonts.TIMES_ROMAN);
 
-            String x = dieta.getDescricao();
+            String x = alimentacao.getDescricao();
 
             String[] lista = x.split(";");
 
@@ -139,6 +132,12 @@ public class Controle {
             e.printStackTrace();
         }
     }
+
+    public IMC buscaIMC() throws SQLException{
+        IMC imc = imcDAO.buscaIMC(logado);
+        return imc;
+    }
+
 
 }
 

@@ -19,8 +19,7 @@
             <Text text="Altura:" />
             <TextField fx:id="tfAltura" />
 
-            <Button onAction="#cadastrar" text="Cadastrar" />
-            <Button onAction="#atualizar" text="Atualizar" />
+            <Button onAction="#acao" text=" " fx:id="btAcao"/>
             <Button onAction="#voltar" text="Voltar" />
         </VBox>
     </center>

@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface DietaDAO {
 
-    List<Dieta> lista() throws SQLException;
+    List<Alimentacao> lista() throws SQLException;
 }

@@ -80,4 +80,34 @@ public class ImcDAOImpl implements ImcDAO {
         return imc;
     }
 
+    public IMC buscaIMC(Usuario u) throws SQLException{
+        IMC imc = null;
+
+        Connection con = FabricaConexao.getConnection();
+
+        PreparedStatement stm = con.prepareStatement("SELECT * FROM tca_imc where id_usuario=?");
+
+        stm.setInt(1,u.getId());
+
+        ResultSet res = stm.executeQuery();
+
+        while(res.next()){
+            int id_imc = res.getInt("id_imc");
+            float kg_inicial = res.getFloat("kg_inicial");
+            float altura = res.getFloat("altura");
+            LocalDate data_inicial = res.getDate("data_inicial").toLocalDate();
+            float kg_atual = res.getFloat("kg_atual");
+            LocalDate data_atual = res.getDate("data_atual").toLocalDate();
+
+            imc = new IMC(id_imc, u, kg_inicial, altura, data_inicial, kg_atual, data_atual);
+        }
+
+        res.close();
+        stm.close();
+        con.close();
+
+        return imc;
+    }
+
+
 }

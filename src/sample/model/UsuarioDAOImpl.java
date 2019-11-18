@@ -141,7 +141,6 @@ public class UsuarioDAOImpl implements UsuarioDAO {
         con.close();
 
         return u;
-
     }
 
     @Override

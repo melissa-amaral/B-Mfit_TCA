@@ -1,12 +1,12 @@
 package sample.model;
 
-public class Dieta {
+public class Alimentacao {
 
     private int id;
     private String nome;
     private String descricao;
 
-    public Dieta(String nome, String descricao) {
+    public Alimentacao(String nome, String descricao) {
         this.nome = nome;
         this.descricao = descricao;
     }

@@ -33,6 +33,16 @@ public class IMC {
         this.data_atual = data_atual;
     }
 
+    public IMC(int id, Usuario usuario, float kg_inicial, float altura, LocalDate data_inicial, float kg_atual, LocalDate data_atual) {
+        this.id = id;
+        this.usuario = usuario;
+        this.kg_inicial = kg_inicial;
+        this.altura = altura;
+        this.data_inicial = data_inicial;
+        this.kg_atual = kg_atual;
+        this.data_atual = data_atual;
+    }
+
     public int getId() {
         return id;
     }

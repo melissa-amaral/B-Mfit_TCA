@@ -8,6 +8,8 @@ public interface ImcDAO {
     IMC insere(IMC i) throws SQLException;
     IMC atualiza(IMC i) throws SQLException;
     List<IMC> lista() throws SQLException;
+    IMC buscaIMC(Usuario u) throws SQLException;
+
 
 
 }

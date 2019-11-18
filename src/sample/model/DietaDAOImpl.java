@@ -10,9 +10,9 @@ import java.util.List;
 public class DietaDAOImpl implements DietaDAO {
 
     @Override
-    public List<Dieta> lista() throws SQLException {
+    public List<Alimentacao> lista() throws SQLException {
 
-        ArrayList<Dieta> dietas = new ArrayList<>();
+        ArrayList<Alimentacao> alimentacaos = new ArrayList<>();
 
         Connection con = FabricaConexao.getConnection();
 
@@ -24,15 +24,15 @@ public class DietaDAOImpl implements DietaDAO {
             String nome = res.getString("nome");
             String descricao = res.getString("descricao");
 
-            Dieta d = new Dieta(nome, descricao);
+            Alimentacao d = new Alimentacao(nome, descricao);
 
-            dietas.add(d);
+            alimentacaos.add(d);
         }
 
         res.close();
         stm.close();
         con.close();
 
-        return dietas;
+        return alimentacaos;
     }
 }
