@@ -6,4 +6,8 @@ import java.util.List;
 public interface ModalidadeDAO {
 
     List<Modalidade> lista() throws SQLException;
+    Modalidade buscaId(int id) throws SQLException;
 }
+
+
+

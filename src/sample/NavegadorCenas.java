@@ -16,6 +16,9 @@ public class NavegadorCenas {
     public static final String JANELA_IMC = "/view/cadastrar_IMC.fxml";
     public static final String JANELA_PDF = "/view/pdf.fxml";
     public static final String JANELA_MODALIDADE = "/view/cadastro_modalidade.fxml";
+    public static final String JANELA_MOSTRA_TREINO = "/view/mostraTreino.fxml";
+    public static final String JANELA_OP_PERSONALIZADO = "/view/opPersonalizado.fxml";
+
 
 
 

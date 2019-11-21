@@ -152,10 +152,22 @@ public class Controle {
     }
 
     public void cadastarModalidadeUser(Modalidade mod, LocalDate data) throws SQLException{
+        Modalidade_Usuario mod_u = null;
+        mod_u = buscaMU();
+        if (mod_u != null){
+            modalidade_usuarioDAO.atualiza(mod_u);
+            System.out.println("entrou auqi");
+        }
+
       Modalidade_Usuario mu = new Modalidade_Usuario(mod, data);
       mu.setId_usuario(logado);
 
       modalidade_usuarioDAO.insere(mu);
+    }
+
+    public Modalidade_Usuario buscaMU() throws SQLException{
+        Modalidade_Usuario mu = modalidade_usuarioDAO.buscaModalidadeUsuario(logado);
+        return mu;
     }
 
 

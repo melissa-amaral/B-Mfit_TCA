@@ -1,9 +1,7 @@
 package sample.model;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Timestamp;
+import java.sql.*;
+import java.time.LocalDate;
 
 public class Modalidade_UsuarioDAOImpl implements Modalidade_UsuarioDAO {
 
@@ -33,10 +31,40 @@ public class Modalidade_UsuarioDAOImpl implements Modalidade_UsuarioDAO {
         PreparedStatement stm = con.prepareStatement("UPDATE tca_modalidade_usuario SET data_termino=? WHERE id_usuario = ?");
 
         stm.setTimestamp(1,new Timestamp(System.currentTimeMillis()));
-        stm.setInt(4,mu.getId_usuario().getId());
+        stm.setInt(2,mu.getId_usuario().getId());
 
         stm.executeUpdate();
 
+        stm.close();
+        con.close();
+
+        return mu;
+    }
+
+    @Override
+    public Modalidade_Usuario buscaModalidadeUsuario(Usuario u) throws SQLException{
+        Modalidade_Usuario mu = null;
+
+        Connection con = FabricaConexao.getConnection();
+
+        PreparedStatement stm = con.prepareStatement("SELECT * FROM tca_modalidade_usuario where id_usuario=?");
+
+        stm.setInt(1,u.getId());
+
+        ModalidadeDAO modalidadeDAO = new ModalidadeDAOImpl();
+
+        ResultSet res = stm.executeQuery();
+
+        while(res.next()){
+            int id_modalidade = res.getInt("id_modalidade");
+            LocalDate data_inicio= res.getDate("data_inicio").toLocalDate();
+
+           Modalidade mod = modalidadeDAO.buscaId(id_modalidade);
+
+            mu = new Modalidade_Usuario(mod, u, data_inicio);
+        }
+
+        res.close();
         stm.close();
         con.close();
 

@@ -6,6 +6,7 @@ import org.omg.CORBA.CODESET_INCOMPATIBLE;
 import sample.NavegadorCenas;
 import sample.model.Controle;
 import sample.model.Modalidade;
+import sample.model.Modalidade_Usuario;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -24,7 +25,6 @@ public class JanelaModalidade {
     }
 
     public void cadastrar()throws SQLException{
-
         Modalidade mod = idMod.getValue();
         LocalDate data = LocalDate.now();
 

@@ -39,7 +39,6 @@ public class JanelaPDF {
             mensagem(Alert.AlertType.INFORMATION,"nao deu certooo");
         }
 
-
     }
 
     public void voltar(){

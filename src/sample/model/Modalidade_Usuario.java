@@ -23,6 +23,12 @@ public class Modalidade_Usuario {
         this.data_inicio = data_inicio;
     }
 
+    public Modalidade_Usuario(Modalidade id_modalidade, Usuario id_usuario, LocalDate data_inicio) {
+        this.id_modalidade = id_modalidade;
+        this.id_usuario = id_usuario;
+        this.data_inicio = data_inicio;
+    }
+
     public Modalidade getId_modalidade() {
         return id_modalidade;
     }
@@ -53,5 +59,10 @@ public class Modalidade_Usuario {
 
     public void setData_termino(LocalDate data_termino) {
         this.data_termino = data_termino;
+    }
+
+    @Override
+    public String toString() {
+        return "Modalidade:" + id_modalidade ;
     }
 }
