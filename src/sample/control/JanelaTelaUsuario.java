@@ -25,7 +25,7 @@ public class JanelaTelaUsuario {
 
     public void initialize() throws SQLException{
         Modalidade_Usuario mu = null;
-        mu = Controle.getInstance().buscaMU();
+        mu = Controle.getInstance().buscaNomeMU();
 
         if(mu != null){
             MostraTreinos.setText(mu.toString());

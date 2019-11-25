@@ -10,7 +10,12 @@ public class Exercicio {
     private int repeticao;
     private int tempo;
 
-    //construtor
+    public Exercicio(String nome, String descricao, int repeticao, int tempo) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.repeticao = repeticao;
+        this.tempo = tempo;
+    }
 
     public int getId() {
         return id;

@@ -22,6 +22,7 @@ public class Controle {
     DietaDAO dietaDAO = new DietaDAOImpl();
     ModalidadeDAO modalidadeDAO = new ModalidadeDAOImpl();
     Modalidade_UsuarioDAO modalidade_usuarioDAO = new Modalidade_UsuarioDAOImpl();
+    ExercicioDAO exercicioDAO = new ExercicioDAOImpl();
 
     private ObservableList<Usuario> usuarios;
     private ObservableList<Nivel> niveis;
@@ -29,6 +30,7 @@ public class Controle {
     private ObservableList<Alimentacao> alimentacaos;
     private ObservableList<Modalidade> modalidades;
     private ObservableList<Modalidade_Usuario> modalidade_usuarios;
+    private ObservableList<Exercicio> exercicios;
     private Usuario logado;
 
     private static Controle instance=new Controle();
@@ -40,6 +42,7 @@ public class Controle {
         alimentacaos = FXCollections.observableArrayList();
         modalidades = FXCollections.observableArrayList();
         modalidade_usuarios = FXCollections.observableArrayList();
+        exercicios = FXCollections.observableArrayList();
     }
 
     public static Controle getInstance(){
@@ -154,21 +157,78 @@ public class Controle {
     public void cadastarModalidadeUser(Modalidade mod, LocalDate data) throws SQLException{
         Modalidade_Usuario mod_u = null;
         mod_u = buscaMU();
-        if (mod_u != null){
+        if (mod_u != null && mod_u.getData_termino() == null){
             modalidade_usuarioDAO.atualiza(mod_u);
-            System.out.println("entrou auqi");
         }
 
-      Modalidade_Usuario mu = new Modalidade_Usuario(mod, data);
-      mu.setId_usuario(logado);
+        Modalidade_Usuario mu = new Modalidade_Usuario(mod, data);
+        mu.setId_usuario(logado);
 
-      modalidade_usuarioDAO.insere(mu);
+        modalidade_usuarioDAO.insere(mu);
     }
+
+
+
+
+
 
     public Modalidade_Usuario buscaMU() throws SQLException{
         Modalidade_Usuario mu = modalidade_usuarioDAO.buscaModalidadeUsuario(logado);
         return mu;
     }
+
+    public Modalidade_Usuario buscaNomeMU() throws SQLException{
+        Modalidade_Usuario mu = modalidade_usuarioDAO.buscaRapidaMU(logado);
+        return mu;
+    }
+
+    public ObservableList<Exercicio> aleatorio() throws SQLException{
+        exercicios.clear();
+        exercicios.addAll(exercicioDAO.Aleatorio(logado));
+        return exercicios;
+    }
+
+    /*
+    public ObservableList<Exercicio> Personalizado() throws SQLException{
+        exercicios.clear();
+        exercicios.addAll(exercicioDAO.Personalizado(logado));
+        return exercicios;
+    }
+     */
+
+    public ObservableList<Exercicio> listaExercicios() throws SQLException{
+
+        ObservableList<Exercicio> aux = FXCollections.observableArrayList();
+
+        //EMBARALHA A LISTA DE EXERCICIOS QUE VAI RETORNAR
+        if(tipo == 1){
+            aux.addAll(aleatorio().sorted());
+        }
+        else if(tipo == 2){
+            //aux.addAll(personalizado().sorted());
+        }
+
+        for(Exercicio e: aux){
+            if(exercicios.size() < 10) {
+                this.exercicios.add(e);
+            }
+        }
+
+        //Adiciona os sorteados ao aux e embaralha
+        aux.clear();
+        aux.addAll(exercicios);
+        aux = aux.sorted();
+
+        //Limpa os sorteados e adiciona aux
+        this.exercicios.clear();
+        this.exercicios.addAll(aux);
+
+        return this.exercicios;
+    }
+
+
+
+
 
 
 }
