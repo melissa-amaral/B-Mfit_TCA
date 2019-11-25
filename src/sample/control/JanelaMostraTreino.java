@@ -1,5 +1,6 @@
 package sample.control;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
@@ -35,7 +36,7 @@ public class JanelaMostraTreino {
     public void setExercicios() throws SQLException {
         //Verifica se array esta vazio ou se já foi realizada os 10 exercicios
         if(nExercicios > 10){
-            this.exercicioAtual = null;
+            exercicioAtual = null;
             mensagem(Alert.AlertType.INFORMATION, "PARABENS VOCÊ TERMINOU O TREINO DE HOJE!");
 
             NavegadorCenas.loadJanela(NavegadorCenas.JANELA_TELA_USUARIO);
@@ -43,37 +44,37 @@ public class JanelaMostraTreino {
         }
 
         //Pega sempre o primeiro exercicio do array
-        this.exercicioAtual = Controle.getInstance().listaExercicios().get(0);
+        exercicioAtual = Controle.getInstance().getSorteados().get(0);
 
         //Atualiza o labele os textos
         nomeExer.setText(exercicioAtual.getNome());
         descricao.setText(exercicioAtual.getDescricao());
-        repeticao.setText(exercicioAtual.getRepeticao());
-        tempo.setText(exercicioAtual.getTempo());
-
+        repeticao.setText(""+exercicioAtual.getRepeticao());
+        tempo.setText(String.valueOf(exercicioAtual.getTempo()));
 
         //Atualiza o número da rodada
         nExercicios++;
-        //Remove a pergunta atual do array de perguntas sorteadas
-       // Jogo.getInstance().getSorteados().remove(perguntaAtual);
-
-        //Atualiza a janela com a próxima pergunta
-        setExercicios();
     }
 
+    @FXML
     private void passar() throws SQLException{
-            //Jogo.getInstance().getSorteados().remove(perguntaAtual);
+            Controle.getInstance().getSorteados().remove(exercicioAtual);
             passar++;
             setExercicios();
     }
 
+    @FXML
     public void voltar(){
         NavegadorCenas.loadJanela(NavegadorCenas.JANELA_TELA_USUARIO);
     }
 
+    @FXML
     private void mensagem(Alert.AlertType type, String msg){
         Alert alert = new Alert(type,msg);
         alert.showAndWait();
     }
+
+
+
 }
 

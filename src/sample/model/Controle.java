@@ -13,6 +13,7 @@ import javafx.collections.ObservableList;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.Collections;
 
 public class Controle {
 
@@ -32,10 +33,11 @@ public class Controle {
     private ObservableList<Modalidade_Usuario> modalidade_usuarios;
     private ObservableList<Exercicio> exercicios;
     private Usuario logado;
+    private int tipo = 0;
 
     private static Controle instance=new Controle();
 
-    public Controle() {
+    private Controle() {
         usuarios = FXCollections.observableArrayList();
         niveis = FXCollections.observableArrayList();
         imcs = FXCollections.observableArrayList();
@@ -168,10 +170,6 @@ public class Controle {
     }
 
 
-
-
-
-
     public Modalidade_Usuario buscaMU() throws SQLException{
         Modalidade_Usuario mu = modalidade_usuarioDAO.buscaModalidadeUsuario(logado);
         return mu;
@@ -182,47 +180,22 @@ public class Controle {
         return mu;
     }
 
-    public ObservableList<Exercicio> aleatorio() throws SQLException{
+    public void aleatorio() throws SQLException{
         exercicios.clear();
-        exercicios.addAll(exercicioDAO.Aleatorio(logado));
-        return exercicios;
+        exercicios.addAll(exercicioDAO.aleatorio(logado));
+        //isso embaralha uma lista....
+        Collections.shuffle(exercicios);
+        System.out.println(exercicios);
     }
 
     /*
-    public ObservableList<Exercicio> Personalizado() throws SQLException{
+    public void Personalizado() throws SQLException{
         exercicios.clear();
         exercicios.addAll(exercicioDAO.Personalizado(logado));
-        return exercicios;
     }
      */
 
-    public ObservableList<Exercicio> listaExercicios() throws SQLException{
-
-        ObservableList<Exercicio> aux = FXCollections.observableArrayList();
-
-        //EMBARALHA A LISTA DE EXERCICIOS QUE VAI RETORNAR
-        if(tipo == 1){
-            aux.addAll(aleatorio().sorted());
-        }
-        else if(tipo == 2){
-            //aux.addAll(personalizado().sorted());
-        }
-
-        for(Exercicio e: aux){
-            if(exercicios.size() < 10) {
-                this.exercicios.add(e);
-            }
-        }
-
-        //Adiciona os sorteados ao aux e embaralha
-        aux.clear();
-        aux.addAll(exercicios);
-        aux = aux.sorted();
-
-        //Limpa os sorteados e adiciona aux
-        this.exercicios.clear();
-        this.exercicios.addAll(aux);
-
+    public ObservableList<Exercicio> getSorteados(){
         return this.exercicios;
     }
 

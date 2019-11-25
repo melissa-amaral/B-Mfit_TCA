@@ -1,11 +1,15 @@
 package sample.model;
 
+import javafx.scene.image.Image;
+
+import java.awt.image.BufferedImage;
+
 public class Exercicio {
 
     private  int id;
     private String nome;
     private int tipo;
-    //private demonstracao;
+    private Image demonstracao;
     private String descricao;
     private int repeticao;
     private int tempo;
@@ -63,5 +67,14 @@ public class Exercicio {
 
     public void setTempo(int tempo) {
         this.tempo = tempo;
+    }
+
+
+    public Image getDemonstracao() {
+        return demonstracao;
+    }
+
+    public void setDemonstracao(Image demonstracao) {
+        this.demonstracao = demonstracao;
     }
 }

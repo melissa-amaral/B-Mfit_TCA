@@ -34,18 +34,15 @@
             <Label fx:id="MostraTreinos" prefHeight="53.0" prefWidth="509.0" />
             <Button onAction="#cadastrarMod" prefHeight="28.0" prefWidth="107.0" text="Modalidades" />
 
-            <Button onAction="#comecar" text="COMEÇAR" />
-
-
             <fx:define>
                 <ToggleGroup fx:id="tipoTreino" />
             </fx:define>
             <children>
-                <RadioButton fx:id="Perso" text="Pesonalizadp" toggleGroup="$tipoTreino" />
+                <RadioButton fx:id="Perso" text="Pesonalizado" toggleGroup="$tipoTreino" />
                 <RadioButton fx:id="Alea" text="Aleatorio" toggleGroup="$tipoTreino" />
             </children>
 
-
+            <Button onAction="#comecar" text="COMEÇAR" />
 
         </VBox>
     </center>

@@ -13,10 +13,16 @@
             prefHeight="400.0" prefWidth="600.0">
 
     <center>
-        <Text fx:id="nomeExer"/>
-        <Label fx:id="Descricao" />
-        <Text fx:id="repeticao"/>
-        <Text fx:id="tempo"/>
+        <VBox>
+
+            <Text fx:id="nomeExer"/>
+            <Label fx:id="Descricao" />
+            <Text fx:id="repeticao"/>
+            <Text fx:id="tempo"/>
+            <Button onAction="#passar" text="PROXIMO"/>
+
+        </VBox>
+
     </center>
 
     <bottom>

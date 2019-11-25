@@ -5,8 +5,8 @@ import java.util.List;
 
 public interface ExercicioDAO {
 
-     List<Exercicio> Aleatorio(Usuario u)throws SQLException ;
-     List<Exercicio> Personalizado(Usuario u)throws SQLException ;
+     List<Exercicio> aleatorio(Usuario u)throws SQLException ;
+     List<Exercicio> Personalizado(Usuario u, int tipo)throws SQLException ;
 
 
 }

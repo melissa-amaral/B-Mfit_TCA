@@ -6,7 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import sample.NavegadorCenas;
 import sample.model.Controle;
-import sample.model.IMC;
 import sample.model.Modalidade_Usuario;
 
 import java.sql.SQLException;
@@ -36,13 +35,16 @@ public class JanelaTelaUsuario {
 
     }
 
-    public void comecar(){
+    public void comecar() throws SQLException{
 
-        if (Perso.isSelected() || Alea.isSelected()){
+        if (Perso.isSelected() || Alea.isSelected()) {
+
             if (Perso.isSelected()){
+
                 NavegadorCenas.loadJanela(NavegadorCenas.JANELA_OP_PERSONALIZADO);
             }
             else if (Alea.isSelected()){
+                Controle.getInstance().aleatorio();
                 NavegadorCenas.loadJanela(NavegadorCenas.JANELA_MOSTRA_TREINO);
             }
         }else {
