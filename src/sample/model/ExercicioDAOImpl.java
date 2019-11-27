@@ -18,11 +18,11 @@ public class ExercicioDAOImpl implements ExercicioDAO {
 
         Connection con = FabricaConexao.getConnection();
 
-        //CallableStatement stm = con.prepareCall("select * from tca_exercicios where id_exercicios=1");
+        CallableStatement stm = con.prepareCall("select * from tca_exercicios where id_exercicios=?");
 
-        //stm.setInt(1, u.getId());
+        stm.setInt(1, u.getId());
 
-        PreparedStatement stm = con.prepareStatement("select * from tca_exercicios where id_exercicios=1");
+      // PreparedStatement stm = con.prepareStatement("select * from tca_exercicios where id_exercicios=1");
 
         ResultSet rs = stm.executeQuery();
         while (rs.next()) {
@@ -30,15 +30,11 @@ public class ExercicioDAOImpl implements ExercicioDAO {
             String descricao = rs.getString("descricao");
             int repeticao = rs.getInt("repeticao");
             int tempo = rs.getInt("tempo");
-            BufferedImage bim=null;
+            String demonstracao = rs.getString("demonstracao");
+
             Image image=null;
-            try{
-                  bim = ImageIO.read(rs.getBinaryStream("demonstracao"));
-                  image = SwingFXUtils.toFXImage(bim,null);
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-            //blob como pegar
+
+            image = new Image(getClass().getResource("/imgs/"+demonstracao).getFile());
 
             Exercicio exer = new Exercicio(nome, descricao, repeticao, tempo);
             exer.setDemonstracao(image);
@@ -54,25 +50,31 @@ public class ExercicioDAOImpl implements ExercicioDAO {
 
         Connection con = FabricaConexao.getConnection();
 
-        CallableStatement stm = con.prepareCall("call tca_listaExerciciosTipo(?,?,?)");
+        CallableStatement stm = con.prepareCall("call tca_listaExerciciosTipo(?,?)");
 
         stm.setInt(1, u.getId());
         stm.setInt(1,tipo);
 
-
         ResultSet rs = stm.executeQuery();
         while (rs.next()) {
+            int id = rs.getInt("id");
             String nome = rs.getString("nome");
             String descricao = rs.getString("descricao");
             int repeticao = rs.getInt("repeticao");
             int tempo = rs.getInt("tempo");
-            //blob como pegar
+            String demonstracao = rs.getString("demonstracao");
+
+            Image image=null;
+
+            image = new Image(getClass().getResource("/imgs/"+demonstracao).getFile());
 
             Exercicio exer = new Exercicio(nome, descricao, repeticao, tempo);
-
+            exer.setDemonstracao(image);
             exercicios.add(exer);
         }
 
         return exercicios;
     }
+
+
 }

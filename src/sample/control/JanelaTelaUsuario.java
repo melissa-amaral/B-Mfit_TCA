@@ -40,7 +40,6 @@ public class JanelaTelaUsuario {
         if (Perso.isSelected() || Alea.isSelected()) {
 
             if (Perso.isSelected()){
-
                 NavegadorCenas.loadJanela(NavegadorCenas.JANELA_OP_PERSONALIZADO);
             }
             else if (Alea.isSelected()){

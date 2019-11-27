@@ -12,14 +12,14 @@ public class Main3  extends Application {
     public void start(Stage primaryStage) throws Exception {
 
 
-        Imagem img = new Imagem();
+       /* Imagem img = new Imagem();
 
         Image im = new Image(Main3.class.getResource("/imgs/giphy.gif").toURI().toString());
         img = new Imagem();
-        img.setImage(im);
+        img.setImage(im);*/
 
 
-        InserirImages.salvarDiretoNoBanco(img);
+       // InserirImages.salvarDiretoNoBanco(img);
 
 
 
