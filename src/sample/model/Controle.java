@@ -185,24 +185,39 @@ public class Controle {
         exercicios.addAll(exercicioDAO.aleatorio(logado));
         //isso embaralha uma lista....
         Collections.shuffle(exercicios);
-        System.out.println(exercicios);
+        System.out.println(exercicios.get(0));
     }
 
-    /*
-    public void Personalizado() throws SQLException{
+
+    public void personalizado(int tipo) throws SQLException{
         exercicios.clear();
-        exercicios.addAll(exercicioDAO.Personalizado(logado));
+        exercicios.addAll(exercicioDAO.Personalizado(logado, tipo));
     }
-     */
+
 
     public ObservableList<Exercicio> getSorteados(){
         return this.exercicios;
     }
 
 
+    public ObservableList<IMC> ordenarIMC() throws SQLException{ //Ordena os jogadores por maior perda de peso
+        ObservableList<IMC> ordenado = FXCollections.observableArrayList();
+        ordenado.addAll(listarIMC());
 
+        for(int i = 0; i < ordenado.size(); i++){
+            for(int j = i; j < ordenado.size(); j++){
+                IMC usuI = ordenado.get(i);
+                IMC usuJ = ordenado.get(j);
 
-
+                if((usuJ.getKg_inicial()- usuJ.getKg_atual()) > (usuI.getKg_inicial() - usuI.getKg_atual())){
+                    IMC aux = usuJ;
+                    ordenado.set(j, usuI);
+                    ordenado.set(i, aux);
+                }
+            }
+        }
+        return FXCollections.unmodifiableObservableList(ordenado);
+    }
 
 }
 

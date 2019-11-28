@@ -1,5 +1,7 @@
 package sample.model;
 
+import javafx.scene.image.Image;
+
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -108,6 +110,5 @@ public class ImcDAOImpl implements ImcDAO {
 
         return imc;
     }
-
 
 }

@@ -23,16 +23,20 @@ public class JanelaOpPersonalizado {
     @FXML
     private RadioButton t4;
 
-    public void comecar(){
+    public void comecar() throws SQLException{
 
         if (t1.isSelected() || t2.isSelected() || t3.isSelected() || t4.isSelected()){
             if (t1.isSelected()){
+                Controle.getInstance().personalizado(1);
             }
             else if (t2.isSelected()){
+                Controle.getInstance().personalizado(2);
             }
             else if (t3.isSelected()){
+                Controle.getInstance().personalizado(3);
             }
             else if (t4.isSelected()){
+                Controle.getInstance().personalizado(4);
             }
 
             NavegadorCenas.loadJanela(NavegadorCenas.JANELA_MOSTRA_TREINO);

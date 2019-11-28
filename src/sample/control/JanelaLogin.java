@@ -20,6 +20,10 @@ public class JanelaLogin {
         NavegadorCenas.loadJanela(NavegadorCenas.JANELA_USUARIO);
     }
 
+    public void ranking(){
+        NavegadorCenas.loadJanela(NavegadorCenas.JANELA_RANKING);
+    }
+
     public void entrar() throws SQLException {
         String login = tfLogin.getText();
         String senha = tfSenha.getText();
@@ -37,6 +41,5 @@ public class JanelaLogin {
         Alert alert = new Alert(type,msg);
         alert.showAndWait();
     }
-
 
 }

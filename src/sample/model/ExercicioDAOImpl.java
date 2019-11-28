@@ -18,7 +18,7 @@ public class ExercicioDAOImpl implements ExercicioDAO {
 
         Connection con = FabricaConexao.getConnection();
 
-        CallableStatement stm = con.prepareCall("select * from tca_exercicios where id_exercicios=?");
+        CallableStatement stm = con.prepareCall("call tca_listaExercicios(?)");
 
         stm.setInt(1, u.getId());
 
@@ -32,9 +32,8 @@ public class ExercicioDAOImpl implements ExercicioDAO {
             int tempo = rs.getInt("tempo");
             String demonstracao = rs.getString("demonstracao");
 
-            Image image=null;
+            Image image = new Image(getClass().getResource("/imgs/" + demonstracao).toExternalForm(),640,420,true,false);
 
-            image = new Image(getClass().getResource("/imgs/"+demonstracao).getFile());
 
             Exercicio exer = new Exercicio(nome, descricao, repeticao, tempo);
             exer.setDemonstracao(image);
@@ -53,20 +52,17 @@ public class ExercicioDAOImpl implements ExercicioDAO {
         CallableStatement stm = con.prepareCall("call tca_listaExerciciosTipo(?,?)");
 
         stm.setInt(1, u.getId());
-        stm.setInt(1,tipo);
+        stm.setInt(2,tipo);
 
         ResultSet rs = stm.executeQuery();
         while (rs.next()) {
-            int id = rs.getInt("id");
             String nome = rs.getString("nome");
             String descricao = rs.getString("descricao");
             int repeticao = rs.getInt("repeticao");
             int tempo = rs.getInt("tempo");
             String demonstracao = rs.getString("demonstracao");
 
-            Image image=null;
-
-            image = new Image(getClass().getResource("/imgs/"+demonstracao).getFile());
+            Image image = new Image(getClass().getResource("/imgs/" + demonstracao).toExternalForm(),640,420,true,false);
 
             Exercicio exer = new Exercicio(nome, descricao, repeticao, tempo);
             exer.setDemonstracao(image);

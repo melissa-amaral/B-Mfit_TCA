@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import sample.NavegadorCenas;
 import sample.model.Controle;
@@ -13,8 +14,6 @@ import java.sql.SQLException;
 
 public class JanelaMostraTreino {
     private Exercicio exercicioAtual;
-    int nExercicios = 0; //Contagem de rodadas
-    int passar = 0; //Contagem de exercicios passados
 
    @FXML
    private Text nomeExer;
@@ -28,14 +27,19 @@ public class JanelaMostraTreino {
    @FXML
    private Text tempo;
 
+   @FXML
+   private ImageView imgView;
+
 
     public void initialize() throws SQLException{
         setExercicios();
     }
 
+    @FXML
     public void setExercicios() throws SQLException {
-        //Verifica se array esta vazio ou se já foi realizada os 10 exercicios
-        if(nExercicios > 10){
+
+        //Verifica se array esta vazio
+        if(Controle.getInstance().getSorteados().size() == 0){
             exercicioAtual = null;
             mensagem(Alert.AlertType.INFORMATION, "PARABENS VOCÊ TERMINOU O TREINO DE HOJE!");
 
@@ -47,19 +51,17 @@ public class JanelaMostraTreino {
         exercicioAtual = Controle.getInstance().getSorteados().get(0);
 
         //Atualiza o labele os textos
-        nomeExer.setText(exercicioAtual.getNome());
+        nomeExer.setText("Exercicio: " +exercicioAtual.getNome());
         descricao.setText(exercicioAtual.getDescricao());
-        repeticao.setText(""+exercicioAtual.getRepeticao());
-        tempo.setText(String.valueOf(exercicioAtual.getTempo()));
+        repeticao.setText("Repetição: "+exercicioAtual.getRepeticao());
+        tempo.setText("Serie:" +exercicioAtual.getTempo());
+        imgView.setImage(exercicioAtual.getDemonstracao());
 
-        //Atualiza o número da rodada
-        nExercicios++;
     }
 
     @FXML
     private void passar() throws SQLException{
             Controle.getInstance().getSorteados().remove(exercicioAtual);
-            passar++;
             setExercicios();
     }
 

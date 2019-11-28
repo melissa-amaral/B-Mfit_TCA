@@ -18,8 +18,7 @@ public class NavegadorCenas {
     public static final String JANELA_MODALIDADE = "/view/cadastro_modalidade.fxml";
     public static final String JANELA_MOSTRA_TREINO = "/view/mostraTreino.fxml";
     public static final String JANELA_OP_PERSONALIZADO = "/view/opPersonalizado.fxml";
-
-
+    public static final String JANELA_RANKING = "/view/ranking.fxml";
 
 
     private static JanelaBase controlador;
