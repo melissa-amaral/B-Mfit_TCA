@@ -27,7 +27,9 @@ public class JanelaOpPersonalizado {
     public void initialize() throws SQLException {
         Modalidade_Usuario mu = Controle.getInstance().buscaMU();
         if (mu.getId_modalidade().getId() ==2) {
-            t2.disabledProperty();
+            t2.setDisable(true);
+        }else {
+            t2.setDisable(false);
         }
     }
 

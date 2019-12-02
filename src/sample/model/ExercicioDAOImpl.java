@@ -22,7 +22,7 @@ public class ExercicioDAOImpl implements ExercicioDAO {
 
         stm.setInt(1, u.getId());
 
-      // PreparedStatement stm = con.prepareStatement("select * from tca_exercicios where id_exercicios=1");
+       //PreparedStatement stm = con.prepareStatement("select * from tca_exercicios");
 
         ResultSet rs = stm.executeQuery();
         while (rs.next()) {
@@ -31,8 +31,9 @@ public class ExercicioDAOImpl implements ExercicioDAO {
             int repeticao = rs.getInt("repeticao");
             int tempo = rs.getInt("tempo");
             String demonstracao = rs.getString("demonstracao");
-
-            Image image = new Image(getClass().getResource("/imgs/" + demonstracao).toExternalForm(),640,420,true,false);
+            System.out.println(demonstracao);
+            System.out.println(getClass().getResource("/sample/imgs/" + demonstracao));
+            Image image = new Image(getClass().getResource("/sample/imgs/" + demonstracao).toExternalForm(),640,420,true,false);
 
 
             Exercicio exer = new Exercicio(nome, descricao, repeticao, tempo);
@@ -62,7 +63,7 @@ public class ExercicioDAOImpl implements ExercicioDAO {
             int tempo = rs.getInt("tempo");
             String demonstracao = rs.getString("demonstracao");
 
-            Image image = new Image(getClass().getResource("/imgs/" + demonstracao).toExternalForm(),640,420,true,false);
+            Image image = new Image(getClass().getResource("/sample/imgs/" + demonstracao).toExternalForm(),640,420,true,false);
 
             Exercicio exer = new Exercicio(nome, descricao, repeticao, tempo);
             exer.setDemonstracao(image);

@@ -16,7 +16,9 @@
             prefWidth="300.0"
             xmlns="http://javafx.com/javafx/8.0.999-ea"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="sample.control.JanelaLogin">
+            fx:controller="sample.control.JanelaLogin" fx:id="root"
+            styleClass="root"
+            stylesheets="/sample/css/base.css">
 
     <top>
         <MenuBar>

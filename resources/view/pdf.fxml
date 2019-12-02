@@ -7,7 +7,13 @@
 <?import javafx.scene.text.Text?>
 
 <?import javafx.scene.control.Button?>
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.JanelaPDF">
+
+<BorderPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.999-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.control.JanelaPDF"
+            styleClass="root2"
+            stylesheets="/sample/css/base.css">
     <top>
         <HBox>
             <Text text="NOME DO PDF:" />

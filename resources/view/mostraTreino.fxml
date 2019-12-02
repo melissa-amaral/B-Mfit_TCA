@@ -7,7 +7,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.JanelaMostraTreino">
+<BorderPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.999-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.control.JanelaMostraTreino"
+            styleClass="root5"
+            stylesheets="/sample/css/base.css">
 
     <center>
         <VBox prefHeight="325.0" prefWidth="600.0" spacing="5">

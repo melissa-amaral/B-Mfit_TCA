@@ -9,7 +9,9 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0"
             xmlns="http://javafx.com/javafx/8.0.999-ea"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="sample.control.JanelaOpPersonalizado">
+            fx:controller="sample.control.JanelaOpPersonalizado"
+            styleClass="root4"
+            stylesheets="/sample/css/base.css">
 
        <VBox layoutX="231.0" layoutY="132.0" prefHeight="168.0" prefWidth="139.0" spacing="5">
            <fx:define>
