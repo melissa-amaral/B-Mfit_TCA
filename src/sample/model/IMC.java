@@ -98,4 +98,11 @@ public class IMC {
     public void setData_atual(LocalDate data_atual) {
         this.data_atual = data_atual;
     }
+
+    @Override
+    public String toString() {
+        return usuario.getNome()+ "  "+(kg_inicial -kg_atual) ;
+    }
+
+
 }

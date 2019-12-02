@@ -114,7 +114,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 
         Connection con = FabricaConexao.getConnection();
 
-        PreparedStatement stm = con.prepareStatement("SELECT * FROM tca_usuario where id=?");
+        PreparedStatement stm = con.prepareStatement("SELECT * FROM tca_usuario where id_usuario=?");
 
         stm.setInt(1,id);
 

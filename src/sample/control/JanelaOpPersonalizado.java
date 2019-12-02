@@ -5,6 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.RadioButton;
 import sample.NavegadorCenas;
 import sample.model.Controle;
+import sample.model.Modalidade;
 import sample.model.Modalidade_Usuario;
 
 import java.sql.SQLException;
@@ -22,6 +23,13 @@ public class JanelaOpPersonalizado {
 
     @FXML
     private RadioButton t4;
+
+    public void initialize() throws SQLException {
+        Modalidade_Usuario mu = Controle.getInstance().buscaMU();
+        if (mu.getId_modalidade().getId() ==2) {
+            t2.disabledProperty();
+        }
+    }
 
     public void comecar() throws SQLException{
 

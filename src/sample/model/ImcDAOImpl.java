@@ -66,7 +66,12 @@ public class ImcDAOImpl implements ImcDAO {
             float altura = res.getFloat("altura");
             LocalDate data_inicial = res.getDate("data_inicial").toLocalDate();
             float kg_atual = res.getFloat("kg_atual");
-            LocalDate data_atual = res.getDate("data_atual").toLocalDate();
+
+            Date data_atualBD = res.getDate("data_atual");
+            LocalDate data_atual =null;
+            if(data_atualBD != null){
+                data_atual = data_atualBD.toLocalDate();
+            }
 
             Usuario u = usuarioDAO.buscaId(id_usuario);
 

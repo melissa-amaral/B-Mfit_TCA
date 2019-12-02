@@ -64,7 +64,7 @@
 
             <Button prefWidth="150" GridPane.columnIndex="1"
                     GridPane.rowIndex="3"
-                   text="RANKING"/>
+                    onAction="#ranking" text="RANKING"/>
         </GridPane>
 
     </center>

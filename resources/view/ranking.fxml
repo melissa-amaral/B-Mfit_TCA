@@ -11,12 +11,22 @@
             fx:controller="sample.control.JanelaRanking"
             prefHeight="400.0" prefWidth="600.0">
 
+    <top>
+        <VBox alignment="CENTER" spacing="5">
+            <Label styleClass="label-principal" text="Usuarios que perderam + peso"
+                   style="-fx-text-fill: black"/>
+        </VBox>
+    </top>
+
     <center>
-        <ListView fx:id="lvRanking"/>
+        <VBox alignment="TOP_CENTER" styleClass="borda" spacing="5"
+              style="-fx-border-color: white">
+
+            <ListView fx:id="lvRanking"/>
+            <Button prefWidth="200" onAction="#voltar" text="Voltar"/>
+        </VBox>
     </center>
 
-    <bottom>
-        <Button onAction="#voltar" text="Voltar" />
-    </bottom>
+
 
 </BorderPane>

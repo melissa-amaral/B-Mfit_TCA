@@ -37,17 +37,22 @@ public class JanelaTelaUsuario {
 
     public void comecar() throws SQLException{
 
-        if (Perso.isSelected() || Alea.isSelected()) {
+        if (Controle.getInstance().buscaMU() != null){
 
-            if (Perso.isSelected()){
-                NavegadorCenas.loadJanela(NavegadorCenas.JANELA_OP_PERSONALIZADO);
-            }
-            else if (Alea.isSelected()){
-                Controle.getInstance().aleatorio();
-                NavegadorCenas.loadJanela(NavegadorCenas.JANELA_MOSTRA_TREINO);
+            if (Perso.isSelected() || Alea.isSelected()) {
+
+                if (Perso.isSelected()){
+                    NavegadorCenas.loadJanela(NavegadorCenas.JANELA_OP_PERSONALIZADO);
+                }
+                else if (Alea.isSelected()){
+                    Controle.getInstance().aleatorio();
+                    NavegadorCenas.loadJanela(NavegadorCenas.JANELA_MOSTRA_TREINO);
+                }
+            }else {
+                mensagem(Alert.AlertType.WARNING,"ESCOLHA UM TIPO DE TREINO");
             }
         }else {
-            mensagem(Alert.AlertType.WARNING,"ESCOLHA UM TIPO DE TREINO");
+            mensagem(Alert.AlertType.INFORMATION, "VOCÊ AINDA NÃO É CADASTRADO EM NENHUMA MODALIDADE");
         }
     }
 

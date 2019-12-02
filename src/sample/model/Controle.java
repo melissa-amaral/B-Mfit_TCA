@@ -200,7 +200,7 @@ public class Controle {
     }
 
 
-    public ObservableList<IMC> ordenarIMC() throws SQLException{ //Ordena os jogadores por maior perda de peso
+    public ObservableList<IMC> ordenarIMC() throws SQLException{ //Ordena os usuarios por maior perda de peso
         ObservableList<IMC> ordenado = FXCollections.observableArrayList();
         ordenado.addAll(listarIMC());
 
@@ -218,6 +218,7 @@ public class Controle {
         }
         return FXCollections.unmodifiableObservableList(ordenado);
     }
+
 
 }
 
