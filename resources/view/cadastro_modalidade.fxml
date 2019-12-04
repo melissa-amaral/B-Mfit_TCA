@@ -7,7 +7,10 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.HBox?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.JanelaModalidade">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.JanelaModalidade"
+            styleClass="root9"
+            stylesheets="/sample/css/base.css">
 
     <VBox spacing="5">
         <Text text="Modalidades:" />

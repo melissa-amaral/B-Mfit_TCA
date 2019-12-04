@@ -1,52 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09c0c01e-54c0-4389-a5a8-b0b28f78653d" name="Default Changelist" comment="ridiculo, mas feito">
+    <list default="true" id="09c0c01e-54c0-4389-a5a8-b0b28f78653d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B-Mfit_TCA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/B-Mfit_TCA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B-Mfit_TCA/view/cadastrar_IMC.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B-Mfit_TCA/view/cadastrar_IMC.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/B-Mfit_TCA/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B-Mfit_TCA/view/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/B-Mfit_TCA/view/atualizar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B-Mfit_TCA/view/atualizar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/B-Mfit_TCA/view/cadastrar_usuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B-Mfit_TCA/view/cadastrar_usuario.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/B-Mfit_TCA/view/telaUsuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/B-Mfit_TCA/view/telaUsuario.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/ABDJOELHO.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/abd.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/abdBICICLETA.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/abdPernaElevada.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/abdTocandoCalcanha.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/abducao.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/adução-no-chão.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/afundo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/afundoalternado.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/agachamento.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/agachamentocomsalto.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/batatadaperna.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/bonitas.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/burpee.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/commidinhas.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/declinado.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/elevacaoduaspernas.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/flexaodiamante.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/flexão.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/gluteoscapoio.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/lateral.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/mulhercolored.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/prancha.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/pranchaDInamica.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/pranchaDupla.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/pranchaLateral.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/pranhcaMovLateral.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/rosca.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/saltocaixa.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/sumo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/imgs/triceps.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/view/cadastrar_IMC.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/view/cadastrar_IMC.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/view/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/view/mostraTreino.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/view/mostraTreino.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/view/opPersonalizado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/view/opPersonalizado.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/view/pdf.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/view/pdf.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/view/ranking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/view/ranking.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sample/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sample/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/view/atualizar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/view/atualizar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/view/cadastrar_usuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/view/cadastrar_usuario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/view/cadastro_modalidade.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/view/cadastro_modalidade.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/view/telaUsuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/view/telaUsuario.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/control/JanelaOpPersonalizado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/control/JanelaOpPersonalizado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/model/ExercicioDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/ExercicioDAOImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,20 +29,55 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/view/telaUsuario.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+            <state relative-caret-position="540">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
             </state>
           </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/view/cadastrar_IMC.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
               <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/view/atualizar.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/view/cadastro_modalidade.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/control/JanelaLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="e#360#361#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#532#533#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,71 +85,45 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/sample/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            <state relative-caret-position="396">
+              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/view/opPersonalizado.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/resources/sample/imgs/bmfIT.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/view/mostraTreino.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/view/login.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="20" column="46" selection-start-line="19" selection-start-column="12" selection-end-line="20" selection-end-column="46" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/view/cadastrar_usuario.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
               <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/view/base.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/sample/imgs/bemFit.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/view/pdf.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="46" selection-start-line="14" selection-start-column="12" selection-end-line="15" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/view/ranking.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/view/login.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="20" column="47" selection-start-line="19" selection-start-column="12" selection-end-line="20" selection-end-column="47" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -172,14 +145,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/sample/model/DietaDAO.java" />
         <option value="$PROJECT_DIR$/src/sample/model/DietaDAOImpl.java" />
-        <option value="$PROJECT_DIR$/resources/view/cadastrar_usuario.fxml" />
         <option value="$PROJECT_DIR$/src/sample/model/Dieta.java" />
         <option value="$PROJECT_DIR$/src/sample/model/Nivel_Exercicios.java" />
         <option value="$PROJECT_DIR$/src/sample/model/Modalidade_Exercicios.java" />
         <option value="$PROJECT_DIR$/src/sample/control/JanelaIMC.java" />
         <option value="$PROJECT_DIR$/resources/view/cadasto_modalidade.fxml" />
         <option value="$PROJECT_DIR$/src/sample/model/Modalidade.java" />
-        <option value="$PROJECT_DIR$/resources/view/cadastro_modalidade.fxml" />
         <option value="$PROJECT_DIR$/src/sample/model/ModalidadeDAO.java" />
         <option value="$PROJECT_DIR$/src/sample/control/JanelaPDF.java" />
         <option value="$PROJECT_DIR$/src/sample/model/Modalidade_Usuario.java" />
@@ -213,8 +184,11 @@
         <option value="$PROJECT_DIR$/resources/view/ranking.fxml" />
         <option value="$PROJECT_DIR$/resources/view/opPersonalizado.fxml" />
         <option value="$PROJECT_DIR$/resources/view/mostraTreino.fxml" />
-        <option value="$PROJECT_DIR$/resources/view/telaUsuario.fxml" />
         <option value="$PROJECT_DIR$/resources/view/cadastrar_IMC.fxml" />
+        <option value="$PROJECT_DIR$/resources/view/telaUsuario.fxml" />
+        <option value="$PROJECT_DIR$/resources/view/cadastrar_usuario.fxml" />
+        <option value="$PROJECT_DIR$/resources/view/cadastro_modalidade.fxml" />
+        <option value="$PROJECT_DIR$/resources/view/atualizar.fxml" />
         <option value="$PROJECT_DIR$/resources/sample/css/base.css" />
       </list>
     </option>
@@ -319,7 +293,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/ExemploImagens" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -392,10 +366,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1375" height="904" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27088037" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27418464" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -405,7 +379,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30836454" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30784914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37203497" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -428,7 +402,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="falta arrumar imc" />
     <MESSAGE value="ridiculo, mas feito" />
-    <option name="LAST_COMMIT_MESSAGE" value="ridiculo, mas feito" />
+    <MESSAGE value="ACABAMOXXX" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACABAMOXXX" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -447,43 +422,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Imagem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#187#188#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/imgs/01.gif" />
-    <entry file="file://$PROJECT_DIR$/resources/imgs/02.gif" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Main3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/Exercicio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/imgs/abd.gif" />
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -734,28 +672,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/control/JanelaLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-          <folding>
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/control/CSS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/control/CSS.java" />
     <entry file="file://$PROJECT_DIR$/resources/sample/imgs/afundo.gif">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/view/opPersonalizado.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/view/base.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/view/pdf.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -773,13 +704,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/view/opPersonalizado.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/resources/sample/imgs/b&amp;m fIT.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sample/imgs/bm fIT.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/sample/imgs/bemFit.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -787,20 +716,32 @@
     <entry file="file://$PROJECT_DIR$/resources/view/mostraTreino.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        <state relative-caret-position="270">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/view/base.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/resources/sample/imgs/bmfIT.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/control/JanelaLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/view/telaUsuario.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        <state relative-caret-position="540">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
@@ -808,9 +749,25 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="20" column="47" selection-start-line="19" selection-start-column="12" selection-end-line="20" selection-end-column="47" />
+          <caret line="20" column="46" selection-start-line="19" selection-start-column="12" selection-end-line="20" selection-end-column="46" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/view/cadastrar_usuario.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/view/cadastro_modalidade.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/view/cadastrar_IMC.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -820,10 +777,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sample/css/base.css">
+    <entry file="file://$PROJECT_DIR$/resources/view/atualizar.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sample/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
         </state>
       </provider>
     </entry>

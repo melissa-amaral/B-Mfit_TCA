@@ -11,11 +11,20 @@
     -fx-background-image: url("/sample/imgs/ee.jpg");
 }
 .root5{
-    -fx-background-image: url("/sample/imgs/bemFit.jpg");
+    -fx-background-image: url("/sample/imgs/bmfIT.jpg");
 }
 .root6{
-    -fx-background-image: url("/sample/imgs/mulhercolored.jpg");
+    -fx-background-image: url("/sample/imgs/B&MFIt.jpg");
 }
 .root7{
     -fx-background-image: url("/sample/imgs/ok.jpg");
+}
+.root8{
+    -fx-background-image: url("/sample/imgs/1.jpg");
+}
+.root9{
+    -fx-background-image: url("/sample/imgs/1.jpg");
+}
+.root10{
+    -fx-background-image: url("/sample/imgs/1.jpg");
 }

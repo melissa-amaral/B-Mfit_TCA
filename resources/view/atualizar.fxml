@@ -9,7 +9,9 @@
 <?import javafx.scene.text.Text?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.control.JanelaAtualiza">
+            fx:controller="sample.control.JanelaAtualiza"
+            styleClass="root10"
+            stylesheets="/sample/css/base.css">
     <center>
         <VBox>
             <Text text="NOME:" />

@@ -12,11 +12,10 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.RadioButton?>
 <BorderPane prefHeight="400.0" prefWidth="600.0"
+            styleClass="root6" stylesheets="/sample/css/base.css"
             xmlns="http://javafx.com/javafx/8.0.999-ea"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="sample.control.JanelaTelaUsuario"
-            styleClass="root6"
-            stylesheets="/sample/css/base.css">
+            fx:controller="sample.control.JanelaTelaUsuario">
     <top>
         <MenuBar>
             <menus>
@@ -37,19 +36,19 @@
    <left>
         <VBox spacing="5" BorderPane.alignment="CENTER">
 
-            <Text text="MEU TREINO" wrappingWidth="117.05615234375" />
-            <Label fx:id="MostraTreinos" prefHeight="53.0" prefWidth="509.0" />
+            <Text fill="WHITE" text="MEU TREINO" wrappingWidth="117.05615234375" />
+            <Label fx:id="MostraTreinos" prefHeight="53.0" prefWidth="509.0" textFill="WHITE" />
             <Button onAction="#cadastrarMod" prefHeight="28.0" prefWidth="107.0" text="Modalidades" />
+
+            <Button onAction="#comecar" text="COMEÇAR" />
 
             <fx:define>
                 <ToggleGroup fx:id="tipoTreino" />
             </fx:define>
             <children>
-                <RadioButton fx:id="Perso" text="Pesonalizado" toggleGroup="$tipoTreino" />
-                <RadioButton fx:id="Alea" text="Aleatorio" toggleGroup="$tipoTreino" />
+                <RadioButton fx:id="Perso" text="Pesonalizado" toggleGroup="$tipoTreino" textFill="WHITE" />
+                <RadioButton fx:id="Alea" text="Aleatorio" toggleGroup="$tipoTreino"  textFill="WHITE"/>
             </children>
-
-            <Button onAction="#comecar" text="COMEÇAR" />
 
 
         </VBox>
